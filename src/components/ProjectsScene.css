@@ -1,0 +1,204 @@
+.spacecraft-overlay {
+    position: fixed; /* Fixed overlay */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Allow interactions with 3D canvas behind it */
+    z-index: 100; /* Ensure it’s above the canvas */
+}
+
+.top-bar {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 40px;
+    border: 2px solid cyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+    .top-bar h1 {
+        color: cyan;
+        margin: 0;
+    }
+
+.barcode {
+    height: 20px;
+    width: 150px;
+    background: repeating-linear-gradient( 90deg, cyan 0, cyan 10px, black 10px, black 15px );
+    margin-left: 10px;
+}
+
+.left-panel {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+.line {
+    width: 5px;
+    height: 100px;
+    background-color: cyan;
+}
+
+.right-panel {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.vertical-line {
+    width: 5px;
+    height: 100px;
+    background-color: cyan;
+}
+
+.small-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid cyan;
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    border-top: 2px solid cyan;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.angled-line {
+    width: 60px;
+    height: 10px;
+    background: repeating-linear-gradient( 45deg, cyan 0, cyan 10px, black 10px, black 20px );
+    transform: skewX(-20deg);
+}
+
+.spacecraft-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    pointer-events: auto;
+}
+
+.spacecraft-controls button {
+    appearance: none;
+    background-color: cyan;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 5px;
+    width: auto;
+}
+
+.spacecraft-controls button:hover {
+    background-color: #444;
+    color: white;
+    border-color: cyan;
+}
+
+.project-slide {
+    position: fixed;
+    top: 10%; /* Adjusted to bring the slide higher */
+    right: 5%;
+    width: 55%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: cyan;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    z-index: 10;
+    overflow-y: auto; /* Allow scrolling for content that doesn't fit */
+    max-height: 80%; /* Prevent the slide from extending beyond the screen */
+}
+
+.slide-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.slide-content {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.project-slide a {
+    color: cyan;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.slide-navigation {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.slide-navigation button {
+    background-color: cyan;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.slide-navigation button:hover {
+    background-color: #444;
+    color: white;
+    border-color: cyan;
+}
+
+.project-images {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-images img {
+    max-width: 450px;
+    max-height:300px;
+    padding: 10px;
+}
