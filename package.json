@@ -2,7 +2,6 @@
   "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "dependencies": {
     "@react-three/drei": "^9.120.6",
     "@react-three/fiber": "^8.17.12",
