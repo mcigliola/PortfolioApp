@@ -1,10 +1,8 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import * as THREE from 'three';
 import RotationController from './RotationController';
 import { useNavigate } from 'react-router-dom';
-import TypingText from './TypingText';
 import './ContactScene.css';
 import SpaceStation from './SpaceStation';
 

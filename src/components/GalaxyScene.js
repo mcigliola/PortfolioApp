@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Canvas, useLoader} from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -23,8 +22,7 @@ function GalaxyScene() {
     const [controlsEnabled, setControlsEnabled] = useState(true);
     const [navObjectPosition, setNavObjectPosition] = useState(new THREE.Vector3(0, 0, 0));
     const [warpSpeed, setWarpSpeed] = useState(false);
-    const [warpCompletedCallback, setWarpCompletedCallback] = useState(null);
-    const navigate = useNavigate();
+    //const [warpCompletedCallback, setWarpCompletedCallback] = useState(null);
     const cameraTarget = useRef(new THREE.Vector3(0, 0, 10));
     const initialCameraPosition = useRef(new THREE.Vector3(0, 3, 8));
     const focusTarget = useRef(new THREE.Vector3(0, 0, 0));
@@ -62,13 +60,6 @@ function GalaxyScene() {
 
                 <color attach="background" args={['black']} />
                 <ambientLight intensity={2} />
-                {/*<pointLight*/}
-                {/*    position={[0, 0, 0]}*/}
-                {/*    intensity={10}*/}
-                {/*    castShadow*/}
-                {/*    distance={50}*/}
-                {/*    decay={2}*/}
-                {/*/>*/}
 
                 <WarpSpeedEffect enabled={warpSpeed }/>
 
@@ -89,15 +80,6 @@ function GalaxyScene() {
                 />
 
                 <SunObject />
-
-                {/*{spaceStationModel && (*/}
-                {/*    <primitive*/}
-                {/*        object={spaceStationModel.scene}*/}
-                {/*        scale={[0.005, 0.005, 0.005]} // Adjust size*/}
-                {/*        position={[-7, 0, 0]} // Position in the scene*/}
-                {/*        //rotation={[0, Math.PI / 4, 0]} // Optional rotation*/}
-                {/*    />*/}
-                {/*)}*/}
 
                 <OrbitController radius={2} speed={0.2} axis={[0, 1, 0]} orbiting={globalOrbiting}>
                     <SpaceObject

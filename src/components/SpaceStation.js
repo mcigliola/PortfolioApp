@@ -3,7 +3,6 @@ import { useFrame, useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { useNavigate } from 'react-router-dom';
-import * as THREE from 'three';
 import robotoFont from 'three/examples/fonts/helvetiker_regular.typeface.json';
 
 function SpaceStation({ modelPath, label, destination }) {
