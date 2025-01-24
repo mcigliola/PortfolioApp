@@ -42,7 +42,7 @@ function ProjectsScene() {
                     saturation={1}
                     fade
                 />
-                <group position={[-3, 0, 0]}>
+                <group position={[-3.5, 0, 0]}>
                     {/* Planet */}
                     <RotationController speed={-0.001}>
                         <SpaceObject
@@ -73,16 +73,16 @@ function ProjectsScene() {
             <div className="project-slide">
                 <h2>{currentProject.title}</h2>
                 <p>{currentProject.details}</p>
+                <a href={currentProject.link} target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                </a>
                 {currentProject.images && currentProject.images.length > 0 && (
-                    <div className="project-images">
+                    <div >
                         {currentProject.images.map((image, index) => (
                             <img key={index} src={image} alt={`Project ${currentProject.title} - ${index + 1}`} />
                         ))}
                     </div>
                 )}
-                <a href={currentProject.link} target="_blank" rel="noopener noreferrer">
-                    View on GitHub
-                </a>
                 {/* Navigation Buttons */}
                 <div className="slide-navigation">
                     <button onClick={handlePrev}>Previous</button>
