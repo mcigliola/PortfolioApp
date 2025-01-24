@@ -34,6 +34,15 @@ const projectsData = [
         texture: './assets/textures/moon3.jpg',
         images: [ProjectSceneImg, OpenGLSceneImg],
     },
+    {
+        id: 4,
+        title: 'Portfolio Web App',
+        brief: '',
+        details: 'This website you are viewing was built using React, leveraging the Fiber and Three libraries. Ongoing improvements I am working to implement include: better responsiveness for different screen sizes, animated transitions between screens, and additional interactive components.',
+        link: 'https://github.com/mcigliola/PortfolioApp',
+        texture: './assets/textures/moon3.jpg',
+        images: [],
+    },
 ];
 
 export default projectsData;
