@@ -159,8 +159,8 @@
     right: 10%;
     top: 10%;
     width: 45%;
-    height: 80%;
-    max-height: 70%;
+   /* height: 80%;*/
+    max-height: 80%;
     padding: 15px;
     border: 2px solid cyan;
     background-color: rgba(0, 0, 0, 0.8); /* Transparent black for a digital feel */
@@ -179,31 +179,3 @@
     word-wrap: break-word;
 }
 
-.typing-animation {
-    animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* Typing animation keyframes */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-    from, to {
-        border-right-color: transparent;
-    }
-
-    50% {
-        border-right-color: cyan;
-    }
-}

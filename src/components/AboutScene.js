@@ -12,7 +12,7 @@ function AboutScene() {
     const navigate = useNavigate();
 
     return (
-        <div className="canvas-container">
+        <div className="canvas-container" >
             <Canvas
                 className="canvas-background"
                 camera={{ position: [0, 0, 5], fov: 40 }}
@@ -40,7 +40,7 @@ function AboutScene() {
 
             {/* Text box */}
             <div className="about-textbox">
-                <TypingText text={AboutText} typingSpeed={35} className="typing-animation" />
+                <pre>{AboutText}</pre>
             </div>
 
             {/* Spacecraft overlay*/}

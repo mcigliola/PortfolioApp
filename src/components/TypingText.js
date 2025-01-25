@@ -27,7 +27,7 @@ function TypingText({ text, typingSpeed = 50, className }) {
     };
 
     return (
-        <div onClick={handleSkipTyping} className={className}>
+        <div className={className}>
             <pre>{displayedText}</pre>
         </div>
     );
